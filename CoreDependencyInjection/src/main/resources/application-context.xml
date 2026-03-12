@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="messageWriter" class="com.mohsin.beans.MessageWriter">
+<!--        <property name="messageProducer" ref="pdfMessageProducer"/>-->
+        <property name="messageProducer" ref="htmlMessageProducer"/>
+    </bean>
+    <bean id="htmlMessageProducer" class="com.mohsin.beans.impl.HTMLMessageProducerImpl"/>
+    <bean id="pdfMessageProducer" class="com.mohsin.beans.impl.PDFMessageProducerImpl"/>
+</beans>
