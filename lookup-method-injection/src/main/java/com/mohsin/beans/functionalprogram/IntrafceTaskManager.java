@@ -1,5 +1,8 @@
-package com.mohsin.beans;
+package com.mohsin.beans.functionalprogram;
 
+import com.mohsin.beans.Task;
+
+// One
 @FunctionalInterface
 public interface IntrafceTaskManager {
 

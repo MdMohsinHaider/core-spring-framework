@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="robot" class="com.mohsin.beans.Robot">
+        <!--<property name="battery" ref="lithiumBattery"/>-->
+        <constructor-arg ref="leadAcidBattery"/>
+    </bean>
+
+    <bean id="lithiumBattery" class="com.mohsin.beans.impl.LithiumBatteryImpl"/>
+    <bean id="leadAcidBattery" class="com.mohsin.beans.impl.LeadAcidBatteryImpl"/>
+</beans>
+

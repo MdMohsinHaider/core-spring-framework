@@ -1,10 +1,17 @@
 package com.mohsin;
 
+import com.mohsin.beans.ConnectionManager;
+import com.mohsin.config.BeanFactoryPostProcessorConfig;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
- * Hello world!
+ * Bean Factory Post Processor Application
  */
-public class App {
+public class BeanFactoryPostProcessorApplication {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanFactoryPostProcessorConfig.class);
+        ConnectionManager connectionManager = applicationContext.getBean("connectionManager", ConnectionManager.class);
+        System.out.println(connectionManager);
     }
 }

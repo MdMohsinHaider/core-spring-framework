@@ -1,10 +1,13 @@
 package com.mohsin;
 
-/**
- * Hello world!
- */
-public class App {
+import com.mohsin.beans.ReportManager;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class AwareInterfaceApplication {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.mohsin.beans");
+        ReportManager reportManager = context.getBean("reportManager", ReportManager.class);
+        reportManager.generateReport("sales-report");
     }
 }

@@ -1,11 +1,12 @@
-package com.mohsin.beans;
+package com.mohsin.beans.impl;
 
+import com.mohsin.beans.ReportGenerator;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 @Component
-public class PdfReportGeneratorImp implements ReportGenerator{
+public class PdfReportGeneratorImp implements ReportGenerator {
     private String reportName;
     private Map<String, Object> reportData;
 

@@ -18,6 +18,13 @@
     </properties>
 
     <dependencies>
+
+        <!-- Spring Core / Context (version inherited from parent) -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

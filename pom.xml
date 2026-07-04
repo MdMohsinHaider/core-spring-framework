@@ -1,19 +1,59 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
+  <!-- Project coordinates -->
   <groupId>com.mohsin</groupId>
   <artifactId>springcore</artifactId>
   <version>1.0</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>springcore</name>
-  <url>http://maven.apache.org</url>
+  <url>https://spring.io</url>
+  <modules>
+    <module>core-annotations</module>
+    <module>bean-scopes</module>
+    <module>bean-alias</module>
+    <module>nested-bean-factories</module>
+    <module>qualifier-annotation</module>
+      <module>singleton-pattern-design</module>
+      <module>java-based-configuration</module>
+      <module>spring-annotations-java-configuration</module>
+      <module>aware-interface</module>
+      <module>CoreDependencyInjection</module>
+    <module>factorybeans</module>
+      <module>SetterConstructorDependencyInjection</module>
+      <module>beans-life-cycle</module>
+      <module>demo</module>
+      <module>lookup-method-injection</module>
+      <module>bean-post-pprocessor</module>
+      <module>bean-factory-post-processor</module>
+      <module>i18n-nls</module>
+  </modules>
 
+  <!-- Centralized versions -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>17</java.version>
+    <spring.version>6.1.2</spring.version>
   </properties>
 
+  <!-- Spring dependency management (BEST PRACTICE) -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <!-- Test dependency -->
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -22,4 +62,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 </project>
